@@ -22,6 +22,9 @@ import javax.swing.SwingConstants;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 import javax.swing.WindowConstants;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 
 public final class GameWindow extends JFrame implements DataPrinter, UserInputReader, GameOverHandler {
 
@@ -34,6 +37,8 @@ public final class GameWindow extends JFrame implements DataPrinter, UserInputRe
     private final JLabel[][] cells = new JLabel[GAME_TABLE_SIZE][GAME_TABLE_SIZE];
 
     private Cell clickedCell;
+    private static final Logger LOGGER = Logger.getLogger(GameWindow.class.getName());
+
 
     public GameWindow() {
         super("Tic-tac-toe");
@@ -51,7 +56,8 @@ public final class GameWindow extends JFrame implements DataPrinter, UserInputRe
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (final ClassNotFoundException | UnsupportedLookAndFeelException |
                 IllegalAccessException | InstantiationException ex) {
-            ex.printStackTrace();
+            LOGGER.log(Level.SEVERE, "Exception occurred", ex);
+
         }
     }
 
@@ -116,7 +122,8 @@ public final class GameWindow extends JFrame implements DataPrinter, UserInputRe
             try {
                 wait();
             } catch (final InterruptedException exception) {
-                exception.printStackTrace();
+                LOGGER.log(Level.SEVERE, "Exception occurred", exception);
+
                 System.exit(2);
             }
         }
