@@ -11,7 +11,7 @@
     <description>The Tic-Tac-Toe simple game using console and GUI mode</description>
     <url>https://org.example/java</url>
     <organization>
-        <name>DevOnline Academy</name>
+        <name>Olvolo</name>
         <url>https://org.example</url>
     </organization>
     <developers>
@@ -39,7 +39,7 @@
     </licenses>
     <scm>
         <connection>scm:git:git://github.com/Olvolo/tic-tac-toe.git</connection>
-        <developerConnection>scm:git:ssh://github.com:devonline-academy/tic-tac-toe.git</developerConnection>
+        <developerConnection>scm:git:ssh://github.com:Olvolo/tic-tac-toe.git</developerConnection>
         <url>https://github.com/Olvolo/tic-tac-toe/tree/master</url>
     </scm>
 
